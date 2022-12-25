@@ -1,32 +1,32 @@
 // portfolio functions
 
-const p_btns = document.querySelector(".p-btns");
-const p_btn = document.querySelectorAll(".p-btn");
-const p_img_element = document.querySelectorAll(".img-overlay");
+const pBtns = document.querySelector(".p-btns");
+const pBtn = document.querySelectorAll(".p-btn");
+const pImgElement = document.querySelectorAll(".img-overlay");
 
-p_btns.addEventListener("click", (e) => {
-  const p_btn_clicked = e.target;
+pBtns.addEventListener("click", (e) => {
+  const pBtnClicked = e.target;
 
-  p_btn.forEach((curElem) => curElem.classList.remove("p-btn-active"));
-  p_btn_clicked.classList.add("p-btn-active");
+  pBtn.forEach((curElem) => curElem.classList.remove("p-btn-active"));
+  pBtnClicked.classList.add("p-btn-active");
 
-  const btn_num = p_btn_clicked.dataset.btnNum;
+  const btn_num = pBtnClicked.dataset.btnNum;
 
   const img_active = document.querySelectorAll(`.p-btn--${btn_num}`);
 
   if (btn_num == undefined)
-    p_img_element.forEach((curElem) =>
+    pImgElement.forEach((curElem) =>
       curElem.classList.remove("p-img-not-active")
     );
   else if (btn_num != 1) {
-    p_img_element.forEach((curElem) =>
+    pImgElement.forEach((curElem) =>
       curElem.classList.add("p-img-not-active")
     );
     img_active.forEach((curElem) =>
       curElem.classList.remove("p-img-not-active")
     );
   } else
-    p_img_element.forEach((curElem) =>
+    pImgElement.forEach((curElem) =>
       curElem.classList.remove("p-img-not-active")
     );
 });
@@ -100,8 +100,12 @@ const obs = new IntersectionObserver(
 obs.observe(heroElement);
 // responsive navbar
 const navbar = document.querySelector(".navbar-btn");
+const navbarList = document.querySelector(".navbar-lists");
 const header = document.querySelector(".header");
 
 navbar.addEventListener("click", () => {
+  header.classList.toggle("active");
+});
+navbarList.addEventListener("click", () => {
   header.classList.toggle("active");
 });
