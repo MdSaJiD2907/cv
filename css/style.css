@@ -321,16 +321,16 @@ picture{
   }
 }
 .cv-progress-bar::before {
-  width: 90%;
-}
-.cv-progress-bar-2::before {
   width: 85%;
 }
-.cv-progress-bar-3::before {
+.cv-progress-bar-2::before {
   width: 80%;
 }
+.cv-progress-bar-3::before {
+  width: 70%;
+}
 .cv-progress-bar-4::before {
-  width: 95%;
+  width: 90%;
 }
 .cv-progress-bar-5::before {
   width: 75%;
@@ -363,16 +363,16 @@ picture{
 }
 
 .cv-progress-bar span {
-  left: 86%;
-}
-.cv-progress-bar-2 span {
   left: 81%;
 }
-.cv-progress-bar-3 span {
+.cv-progress-bar-2 span {
   left: 76%;
 }
+.cv-progress-bar-3 span {
+  left: 71%;
+}
 .cv-progress-bar-4 span {
-  left: 91%;
+  left: 86%;
 }
 .cv-progress-bar-5 span {
   left: 71%;
@@ -458,10 +458,10 @@ picture{
   display: none;
 }
 /* contact */
-/* .maplocation{
+.maplocation{
   border: 0;
   padding-left: 20%
-} */
+}
 .section-contact-main {
   max-width: 70rem;
   margin: 0 auto;
